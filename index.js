@@ -41,13 +41,12 @@ function removeFromCart(item) {
   //   {cart.splice(i, 1)}
   // else
   //   { console.log("That item is not in your cart.") }
-  var incart = false
   for (var i in cart) {
     if ( cart[i].hasOwnProperty(item) )
       { cart.splice(i, 1)
-        incart = true }
+        return cart }
     }
-  if ( incart === false ) { console.log("That item is not in your cart.") }
+  console.log("That item is not in your cart.")
   return cart
 }
 
